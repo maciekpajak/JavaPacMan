@@ -123,7 +123,6 @@ public class PacMan extends Character implements Runnable,KeyListener {
 
     class RemindTask extends TimerTask {
         public void run() {
-            System.out.format("Time's up!%n");
             mode = Mode.Chase;
             timer.cancel();
         }

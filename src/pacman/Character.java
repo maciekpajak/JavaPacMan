@@ -210,23 +210,6 @@ public class Character {
 		
 	}
 	
-	
-	protected boolean canMove2() {
-		Position pos1 = new Position(this.pos);
-		if(this.direction == Direction.Right)
-			pos1.setPos(this.pos.getxPos()+1, this.pos.getyPos() );
-		if(this.direction == Direction.Left)
-			pos1.setPos(this.pos.getxPos()-1, this.pos.getyPos() );
-		if(this.direction == Direction.Up)
-			pos1.setPos(this.pos.getxPos(), this.pos.getyPos()-1 );
-		if(this.direction == Direction.Down)
-			pos1.setPos(this.pos.getxPos(), this.pos.getyPos()+1 );
-		
-		if(map.isWall(pos1))
-			return false;
-		return true;
-	}
-	
 	protected boolean canMove3(Direction dir) {
 		Position pos1 = new Position(this.pos);
 		if(dir == Direction.Right)

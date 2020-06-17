@@ -29,6 +29,7 @@ public class Ghost extends Character implements Runnable, IGhost{
 	protected Thread t2;
 	protected Timer timer = new Timer();
 	protected boolean isTimerRunning = false;
+	protected Position corner;
 
 	public Position getCorner() {
 		return corner;
@@ -38,7 +39,7 @@ public class Ghost extends Character implements Runnable, IGhost{
 		this.corner = corner;
 	}
 
-	protected Position corner;
+	
 
 	
 	public Mode getMode() {
@@ -258,7 +259,6 @@ public class Ghost extends Character implements Runnable, IGhost{
 
     class Release extends TimerTask {
         public void run() {
-            System.out.format("Time's up!%n");
             setPos(new Position(114,82));
             mode = Mode.Chase;
             isTimerRunning = false;

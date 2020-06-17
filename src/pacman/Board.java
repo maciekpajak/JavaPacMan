@@ -644,7 +644,6 @@ public class Board extends JPanel implements Runnable, ActionListener{
 
 
 	private void broadcastMode(Mode mode) {
-		System.out.println(mode);
 		blinky.setMode(mode);
 		inky.setMode(mode);
 		clyde.setMode(mode);
